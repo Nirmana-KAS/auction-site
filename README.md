@@ -1,8 +1,8 @@
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="30%"></p>
+<p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="30%"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="30%"><img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="30%"></p>
 
-<h1 align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="5%"> GEM ME - Auction Website <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="5%"></h1>
+<h1 align="center">  GEM ME - Auction Website </h1>
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
