@@ -88,6 +88,7 @@ We welcome contributions! If you find bugs or have suggestions, please open an i
 For further questions or inquiries, feel free to reach out at support@gemme.com.
 
 
-<p align="center"> 💎 Happy Bidding! 💎</p>
+<p align="center" style="font-size: 24;"> 💎 Happy Bidding! 💎</p>
+
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
