@@ -1,6 +1,6 @@
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<h1 align="center"># 💎 GEM ME - Auction Website 💎</h1>
+<h1 align="center"> 💎 GEM ME - Auction Website 💎</h1>
 
 Welcome to **GEM ME**, an online auction house where you can bid on and sell high-quality gemstones. This project uses a combination of front-end and back-end technologies to create a seamless user experience for both buyers and sellers.
 
@@ -88,6 +88,6 @@ We welcome contributions! If you find bugs or have suggestions, please open an i
 For further questions or inquiries, feel free to reach out at support@gemme.com.
 
 
-<h1 align="center"># 💎 Happy Bidding! 💎</h1>
+<p align="center"> 💎 Happy Bidding! 💎</p>
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
