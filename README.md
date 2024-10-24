@@ -1,24 +1,19 @@
-Here's a README file template for your **GEM ME** auction website project:
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
----
-
-# 💎 GEM ME - Auction Website 💎
+<h1 align="center"># 💎 GEM ME - Auction Website 💎</h1>
 
 Welcome to **GEM ME**, an online auction house where you can bid on and sell high-quality gemstones. This project uses a combination of front-end and back-end technologies to create a seamless user experience for both buyers and sellers.
 
----
 
 ## 💻 Project Overview
 
 **GEM ME** is an online platform for auctioning gemstones. Users can browse listings, place bids, and sell their gems. The website is built using a full-stack approach with HTML and CSS on the frontend, and C# with ASP.NET for the backend. Data is stored in an SQL database.
 
----
 
 ## 🌐 Live Website
 
 Access the live version here: [www.gemme.com](http://www.gemme.com)
 
----
 
 ## 🚀 Features
 
@@ -29,7 +24,6 @@ Access the live version here: [www.gemme.com](http://www.gemme.com)
 - **Seller Dashboard**: Manage your listings and view the bids placed on your gemstones.
 - **Responsive Design**: Accessible on all devices with a mobile-first design.
 
----
 
 ## 🛠️ Tech Stack
 
@@ -42,7 +36,6 @@ Access the live version here: [www.gemme.com](http://www.gemme.com)
 - **ASP.NET Core**: Web framework used to build the back-end functionality.
 - **SQL**: Database management for storing users, auctions, and bids.
 
----
 
 ## 💻 Development Environment
 
@@ -50,7 +43,6 @@ Access the live version here: [www.gemme.com](http://www.gemme.com)
 - **Framework**: ASP.NET Core
 - **Database**: SQL Server
 
----
 
 ## 🏗️ Project Setup & Installation
 
@@ -74,32 +66,28 @@ To set up this project on your local machine, follow these steps:
 5. **Build and Run the Project**:
     - Press `F5` or click on the green play button to run the project.
 
----
 
 ## 🔑 Authentication
 
 - User authentication is handled via ASP.NET Identity, providing secure login and registration functionality.
 - Passwords are hashed before being stored in the SQL database.
 
----
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
 ## 🤝 Contributing
 
 We welcome contributions! If you find bugs or have suggestions, please open an issue or submit a pull request.
 
----
 
 ## 📧 Contact
 
 For further questions or inquiries, feel free to reach out at support@gemme.com.
 
----
 
-Happy Bidding! 💎
+<h1 align="center"># 💎 Happy Bidding! 💎</h1>
 
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
