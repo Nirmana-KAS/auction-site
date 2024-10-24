@@ -1,6 +1,6 @@
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<h1 align="center"> 💎 GEM ME - Auction Website 💎</h1>
+<h1 align="center"> <img src="https://gifdb.com/gif/diamond-sapphire-spin-precious-gemstone-0qnui5kcasohvp27.html?embed=true" width="100%"> GEM ME - Auction Website <img src="https://gifdb.com/gif/diamond-sapphire-spin-precious-gemstone-0qnui5kcasohvp27.html?embed=true" width="100%"></h1>
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
