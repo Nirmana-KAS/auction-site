@@ -5,17 +5,17 @@
 Welcome to **GEM ME**, an online auction house where you can bid on and sell high-quality gemstones. This project uses a combination of front-end and back-end technologies to create a seamless user experience for both buyers and sellers.
 
 
-## 💻 Project Overview
+<h2 align="center" > 💻 Project Overview </h2>
 
 **GEM ME** is an online platform for auctioning gemstones. Users can browse listings, place bids, and sell their gems. The website is built using a full-stack approach with HTML and CSS on the frontend, and C# with ASP.NET for the backend. Data is stored in an SQL database.
 
 
-## 🌐 Live Website
+<h2 align="center" > 🌐 Live Website </h2>
 
 Access the live version here: [www.gemme.com](http://www.gemme.com)
 
 
-## 🚀 Features
+<h2 align="center" > 🚀 Features </h2>
 
 - **User Authentication**: Secure login and registration for users.
 - **Auction Listings**: Browse active gem auctions or list your own gems for bidding.
@@ -25,7 +25,7 @@ Access the live version here: [www.gemme.com](http://www.gemme.com)
 - **Responsive Design**: Accessible on all devices with a mobile-first design.
 
 
-## 🛠️ Tech Stack
+<h2 align="center" > 🛠️ Tech Stack </h2>
 
 ### **Frontend**:
 - **HTML**: Structure and layout of the website.
@@ -37,14 +37,14 @@ Access the live version here: [www.gemme.com](http://www.gemme.com)
 - **SQL**: Database management for storing users, auctions, and bids.
 
 
-## 💻 Development Environment
+<h2 align="center" > 💻 Development Environment </h2>
 
 - **IDE**: Visual Studio 2022
 - **Framework**: ASP.NET Core
 - **Database**: SQL Server
 
 
-## 🏗️ Project Setup & Installation
+<h2 align="center" > 🏗️ Project Setup & Installation </h2>
 
 To set up this project on your local machine, follow these steps:
 
@@ -67,28 +67,28 @@ To set up this project on your local machine, follow these steps:
     - Press `F5` or click on the green play button to run the project.
 
 
-## 🔑 Authentication
+<h2 align="center" > 🔑 Authentication </h2>
 
 - User authentication is handled via ASP.NET Identity, providing secure login and registration functionality.
 - Passwords are hashed before being stored in the SQL database.
 
 
-## 📄 License
+<h2 align="center" > 📄 License </h2>
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-## 🤝 Contributing
+<h2 align="center" > 🤝 Contributing </h2>
 
 We welcome contributions! If you find bugs or have suggestions, please open an issue or submit a pull request.
 
 
-## 📧 Contact
+<h2 align="center" > 📧 Contact </h2>
 
 For further questions or inquiries, feel free to reach out at support@gemme.com.
 
 
-<h3 align="center" > 💎 Happy Bidding! 💎 </h3>
+<h2 align="center" > 💎 Happy Bidding! 💎 </h2>
 
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
