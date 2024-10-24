@@ -1,6 +1,6 @@
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<h1 align="center"> <img src="https://media.gifdb.com/diamond-sapphire-spin-precious-gemstone-0qnui5kcasohvp27.gif" width="100%"> GEM ME - Auction Website <img src="https://media.gifdb.com/diamond-sapphire-spin-precious-gemstone-0qnui5kcasohvp27.gif" width="100%"></h1>
+<h1 align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="10%"> GEM ME - Auction Website <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="10%"></h1>
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
