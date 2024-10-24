@@ -2,6 +2,8 @@
 
 <h1 align="center"> 💎 GEM ME - Auction Website 💎</h1>
 
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 Welcome to **GEM ME**, an online auction house where you can bid on and sell high-quality gemstones. This project uses a combination of front-end and back-end technologies to create a seamless user experience for both buyers and sellers.
 
 ---
