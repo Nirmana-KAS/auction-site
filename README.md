@@ -103,6 +103,9 @@ For further questions or inquiries, feel free to reach out at support@gemme.com.
 
 ---
 
+
+<p align="center" > <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/image_processing20200515-22405-jcn3n4.gif" width="100%"> </p>
+
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 <h2 align="center" > 💎 Happy Bidding! 💎 </h2>
