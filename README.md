@@ -58,7 +58,7 @@ To set up this project on your local machine, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/gemme.git
+    git clone https://github.com/Nirmana-KAS/auction-site.git
     ```
 
 2. **Open the project in Visual Studio 2022**:
