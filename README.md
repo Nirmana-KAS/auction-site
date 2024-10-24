@@ -101,8 +101,8 @@ For further questions or inquiries, feel free to reach out at support@gemme.com.
 
 ---
 
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 <h2 align="center" > 💎 Happy Bidding! 💎 </h2>
-
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
