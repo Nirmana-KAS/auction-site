@@ -33,6 +33,7 @@
     }
 }
 
+
 <h4 style="text-align:center">@Model.Title</h4>
 <div class="container" style="background-color: rgba(138, 129, 133, 0.6); margin-top: 50px; margin-bottom: 50px; padding: 20px; border-radius:10px;">
     <div class="row">
@@ -117,8 +118,9 @@ else
     @foreach (var comment in Model.Comments)
     {
         <div style="border:1px solid lightgray; margin: 10px; padding: 10px; border-radius: 10px; width: 40%;">
-            <p>@comment.Content - @comment.User.UserName</p>
+            <p>@comment.Content - @(comment.User?.UserName ?? "Unknown User")</p>
         </div>
     }
 </div>
+
 

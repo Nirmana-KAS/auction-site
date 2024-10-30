@@ -8,52 +8,220 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Gem_Auctions_Web.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/output.css" />
+    <style>
+        /* Hero Section Style */
+        .hero {
+            background-image: url('/Images/01.jpg'); /* Replace with your hero image URL */
+            background-size: cover; /* Cover the entire hero section */
+            background-position: center; /* Center the image */
+            height: 400px; /* Set a height for the hero section */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            position: relative; /* For absolute positioning of search bar */
+            color: white; /* Change text color if needed */
+            text-align: center; /* Center text */
+        }
+
+        /* Search Bar Input Style */
+        .search-bar-container {
+            border-color: #b07c04;
+            position: relative;
+            width: 100%;
+            max-width: 400px; /* Set the width of the search bar */
+            margin: 0 auto; /* Center search bar */
+        }
+
+            .search-bar-container:hover{
+                border-color: #DAA520;
+            }
+
+        .search-bar-input {
+            width: 100%;
+            border-radius: 20px;
+            border: 2px solid #b07c04;
+            padding: 10px; /* Padding for search bar */
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+            .search-bar-input:hover{
+                border-color: #DAA520;
+                background-color: #ffffff;
+            }
+
+        .search-bar-button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: #b07c04;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 15px; /* Adjust padding for the button */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .search-bar-button:hover{
+                background-color: #DAA520;
+            }
+
+        /* Other existing styles remain unchanged */
+        .nav-link {
+            color: #DAA520;
+            border-radius: 50px;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .nav-link:hover {
+                background-color: #DAA520;
+                color: black;
+                transform: scale(1.05);
+            }
+
+        /* Flexbox for Body to Push Footer Down */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0;
+        }
+
+        .container {
+            flex: 1; /* Allow main content to expand and fill space */
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="background-color: black; color: #b07c04;">
             <div class="container-fluid">
-
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Listings" asp-action="Index"><i class="fa fa-solid fa-house"></i> Active Listings</a>
+                                <img src="~/Images/Gemme Logo 1.png" alt="Logo" style="width: 45px;" />
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="Index">
+                                 Gem me
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="Index">
+                                <i class="fa-solid fa-gavel"></i> Auction
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="Index">
+                                <i class="fa-solid fa-circle-info"></i> About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="Index">
+                                <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+                            </a>
+                        </li>
+                        
+
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link " asp-area="" asp-controller="Listings" asp-action="Create"><i class="fa fa-solid fa-plus"></i> Create Listing</a>
+                                <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="Create">
+                                    <i class="fa fa-solid fa-plus"></i> Create Listing
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " asp-area="" asp-controller="Listings" asp-action="MyListings"><i class="fa fa-solid fa-newspaper"></i> My Listings</a>
+                                <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="MyListings">
+                                    <i class="fa fa-solid fa-newspaper"></i> My Listings
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " asp-area="" asp-controller="Listings" asp-action="MyBids"><i class="fa fa-solid fa-sack-dollar"></i> My Bids</a>
+                                <a class="nav-link" asp-area="" asp-controller="Listings" asp-action="MyBids">
+                                    <i class="fa fa-solid fa-sack-dollar"></i> My Bids
+                                </a>
                             </li>
                         }
-                        <li class="nav-item" style="margin:auto;">
-                            <form asp-controller="Listings" asp-action="Index" method="get">
-                                <input style="width: 80%; float:left; border-top-left-radius: 20px; border-bottom-left-radius: 20px; background: whitesmoke;" type="text" name="searchString" class="form-control" />
-                                <button style="width:20%; float:left; border: none; background:transparent; height:40px;" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-controller="Account" asp-action="Logout" method="post" class="ms-2"></form>
+                    }
                 </div>
             </div>
         </nav>
+
     </header>
-    <div class="container">
+    <div class="container;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    <!-- New Footer Section -->
+    <!-- Decorative Line at the Top -->
+    <div style="height: 4px; width: 100%; background-color: #DAA520; margin-bottom: 32px;"></div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Gem_Auctions_Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer bg-gray-900 text-white py-12" style="color: #ffffff; padding: 2rem 0; width: 100%; display: flex; justify-content: center;">
+        <div class="footer-container" style="max-width: 1200px; width: 100%; padding: 0 1rem;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(5, minmax(auto, 1fr)); gap: 1rem; justify-items: center;">
+                <!-- Subscribe Section -->
+                <div class="footer-item subscribe" style="display: flex; flex-direction: column; align-items: center;">
+                    <h3 class="footer-heading" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; text-align: left; width: 100%;">Subscribe to our newsletter</h3>
+                    <div class="subscribe-form" style="display: flex; justify-content: center;">
+                        <input id="newsletter-email-input" class="email-input" placeholder="Email address" type="email" style="width: auto; padding: 0.5rem; border: none; outline: none; color: #374151; flex: 1;" />
+                        <button id="newsletter-subscribe-button" class="subscribe-button" style="padding: 0.5rem 1rem; background-color: #DAA520; color: #ffffff; border: none; cursor: pointer;">Subscribe</button>
+                    </div>
+                    <p id="newsletter-message" class="error-message hidden" style="color: #f87171; font-size: 0.875rem; margin-top: 0.5rem;"></p>
+                </div>
+
+                <!-- Empty Column -->
+                <div class="footer-item"></div>
+
+                <!-- Services Section -->
+                <div class="footer-item">
+                    <h3 class="footer-heading" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; text-align: left; width: 100%;">Services</h3>
+                    <ul class="footer-links left-align" style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="margin: 0.25rem 0;"><a href="/services/email-marketing" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Email Marketing</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/services/campaigns" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Campaigns</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/services/branding" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Branding</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/services/offline" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Offline</a></li>
+                    </ul>
+                </div>
+
+                <!-- About Section -->
+                <div class="footer-item">
+                    <h3 class="footer-heading" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; text-align: left; width: 100%;">About</h3>
+                    <ul class="footer-links left-align" style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="margin: 0.25rem 0;"><a href="/about/our-story" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Our Story</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/about/benefits" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Benefits</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/about/team" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Team</a></li>
+                        <li style="margin: 0.25rem 0;"><a href="/about/careers" style="color: #9ca3af; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="footer-item social">
+                    <h3 class="footer-heading" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; text-align: left; width: 100%;">Follow Us</h3>
+                    <div class="social-icons" style="display: flex; flex-direction: column; align-items: center;">
+                        <a href="#" style="margin: 0.5rem 0; color: #9ca3af;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                        <a href="#" style="margin: 0.5rem 0; color: #9ca3af;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a>
+                        <a href="#" style="margin: 0.5rem 0; color: #9ca3af;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#9ca3af'"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 2rem; border-top: 1px solid #374151; padding-top: 1rem; text-align: center; color: #9ca3af;">
+                &copy; 2024 - Gem_Auctions_Web - <a class="text-white" asp-area="" asp-controller="Home" asp-action="Privacy" style="color: #ffffff; text-decoration: none;">Privacy</a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

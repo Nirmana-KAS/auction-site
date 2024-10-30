@@ -6,48 +6,51 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create Listing</h2>
+<h2 id="form-title">Create Listing</h2>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<hr id="form-divider" />
+
+<div class="row" id="form-container">
+    <div class="col-md-4" id="form-wrapper">
+        <form asp-action="Create" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div asp-validation-summary="ModelOnly" class="text-danger" style="color: #d9534f;"></div>
+
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <label asp-for="Title" class="control-label" style="font-weight: 500;">Title</label>
+                <input asp-for="Title" class="form-control form-input" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description" class="control-label" style="font-weight: 500;">Description</label>
+                <input asp-for="Description" class="form-control form-input" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Price" class="control-label">Starting Bid</label>
-                <input asp-for="Price" class="form-control" />
+                <label asp-for="Price" class="control-label" style="font-weight: 500;">Starting Bid</label>
+                <input asp-for="Price" class="form-control form-input" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>
-                <input asp-for="Image" class="form-control" accept="image/*" style="width: 30%" />
+                <label asp-for="Image" class="control-label" style="font-weight: 500;">Image</label>
+                <input asp-for="Image" class="form-control form-input" accept="image/*" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
-                <input type="hidden" asp-for="IdentityUserId" class="form-control" value="@userManager.GetUserId(User)" />
+                <input type="hidden" asp-for="IdentityUserId" value="@userManager.GetUserId(User)" />
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary form-button" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div style="text-align: center; margin-top: 2rem;">
+    <a asp-action="Index" id="back-link">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

@@ -5,5 +5,6 @@ namespace Gem_Auctions_Web.Data.Services
     public interface IBidsService
     {
         Task Add(Bid bid);
+        IQueryable<Bid> GetAll();
     }
 }

@@ -1,0 +1,58 @@
+﻿@model PaginatedList<Gem_Auctions_Web.Models.Listing>
+
+@{
+    ViewData["Title"] = "Active Listings";
+}
+
+<h2 class="text-center my-4">Active Listings</h2>
+
+@foreach (var listing in Model)
+{
+    <div class="container rounded shadow-lg p-4 mb-5" style="background-color: rgba(138, 129, 133, 0.5);">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-5 text-center mb-3 mb-md-0">
+                <img src="~/Images/@listing.ImagePath" class="img-fluid rounded" style="max-width: 100%; max-height: 400px; object-fit: cover;" alt="Listing Image" />
+            </div>
+            <div class="col-12 col-md-7">
+                <h5 class="mb-2">
+                    <a asp-action="Details" asp-route-id="@listing.Id" style="color: black; text-decoration: none;">
+                        @listing.Title
+                    </a>
+                </h5>
+                <p class="mb-2" style="font-size: 1rem; color: #333;">@listing.Description</p>
+                <p class="mb-1" style="font-size: 1.1rem; font-weight: bold; color: #2c3e50;">
+                    Bid: $@listing.Price.ToString("N2")
+                </p>
+                <p style="font-size: 0.9rem; color: #555;">
+                    Listed by: @listing.User.Email
+                </p>
+            </div>
+        </div>
+    </div>
+}
+
+@if (!Model.Any())
+{
+    <p class="text-center text-muted mt-5">No Active Listings</p>
+}
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<div class="d-flex justify-content-center align-items-center my-4">
+    <a asp-action="ActiveListings"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-outline-secondary mx-2 @prevDisabled">
+        Previous
+    </a>
+    <span class="px-3 py-2" style="font-size: 1.1rem; cursor: default;">
+        Page @Model.PageIndex of @Model.TotalPages
+    </span>
+    <a asp-action="ActiveListings"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-outline-secondary mx-2 @nextDisabled">
+        Next
+    </a>
+</div>
