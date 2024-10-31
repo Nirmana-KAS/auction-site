@@ -17,7 +17,7 @@
     My Wins!
 </h1>
 
-<div style="display: flex; flex-wrap: wrap; gap: 100px; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 100px; justify-content: center;margin-top:100px;">
     @foreach (var bid in Model)
     {
         <div style="
@@ -53,34 +53,29 @@
 
 @if (!Model.Any())
 {
-    <p style="text-align: center;">No Bids</p>
-}
-
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    <p class="text-center">No Active Listings</p>
 }
 
 <div class="d-flex justify-content-center mt-4" style="padding-top: 20px;">
     <a asp-action="Index"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
        class="btn btn-default @(!Model.HasPreviousPage ? "disabled" : "")"
-       style="margin: 0 5px; background-color: #2fed85; color: white; text-decoration: none;"
-       onmouseover="this.style.color='#ffffff';" 
-       onmouseout="this.style.color='white';">
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
         Previous
     </a>
-    
-    <div style="margin: 0 10px; padding: 8px; font-weight: bold; cursor: default; color: #9ca3af;">
+
+    <div class="btn" style="cursor: default; color: #9ca3af;">
         Page @Model.PageIndex of @Model.TotalPages
     </div>
-    
+
     <a asp-action="Index"
        asp-route-pageNumber="@(Model.PageIndex + 1)"
        class="btn btn-default @(!Model.HasNextPage ? "disabled" : "")"
-       style="margin: 0 5px; background-color: #2fed85; color: white; text-decoration: none;"
-       onmouseover="this.style.color='#ffffff';" 
-       onmouseout="this.style.color='white';">
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
         Next
     </a>
 </div>

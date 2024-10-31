@@ -17,7 +17,7 @@
     List of My Gems
 </h1>
 
-<div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 100px; justify-content: center;margin-top:100px;">
     @foreach (var listing in Model)
     {
         <div style="
@@ -62,7 +62,34 @@
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
+
 <div class="d-flex justify-content-center mt-4" style="padding-top: 20px;">
+    <a asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @(!Model.HasPreviousPage ? "disabled" : "")"
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
+        Previous
+    </a>
+
+    <div class="btn" style="cursor: default; color: #9ca3af;">
+        Page @Model.PageIndex of @Model.TotalPages
+    </div>
+
+    <a asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @(!Model.HasNextPage ? "disabled" : "")"
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
+        Next
+    </a>
+</div>
+
+
+
+@* <div class="d-flex justify-content-center mt-4" style="padding-top: 20px;">
     <a asp-action="Index"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
        class="btn btn-default @(!Model.HasPreviousPage ? "disabled" : "")"
@@ -85,3 +112,4 @@
         Next
     </a>
 </div>
+ *@

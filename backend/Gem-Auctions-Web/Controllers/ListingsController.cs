@@ -33,7 +33,7 @@ namespace Gem_Auctions_Web.Controllers
         public async Task<IActionResult> Index(int? pageNumber, string searchString)
         {
             var applicationDbContext = _listingsService.GetAll();
-            int pageSize = 3;
+            int pageSize = 8;
             if (!string.IsNullOrEmpty(searchString))
             {
                 applicationDbContext = applicationDbContext.Where(a => a.Title.Contains(searchString));
@@ -44,36 +44,18 @@ namespace Gem_Auctions_Web.Controllers
             return View(await PaginatedList<Listing>.CreateAsync(applicationDbContext.Where(l => l.IsSold == false).AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
-        // Action method for Active Listings page
-        public async Task<IActionResult> ActiveListings(int? pageNumber, string searchString)
-        {
-            var listings = _listingsService.GetAll();
-            int pageSize = 3;
-
-            // Filter listings to show only unsold (active) items
-            listings = listings.Where(l => !l.IsSold);
-
-            // Apply search filter if a search string is provided
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                listings = listings.Where(l => l.Title.Contains(searchString));
-            }
-
-            // Paginate results and send to Active view
-            return View("Active", await PaginatedList<Listing>.CreateAsync(listings.AsNoTracking(), pageNumber ?? 1, pageSize));
-        }
-
+        
         public async Task<IActionResult> MyListings(int? pageNumber)
         {
             var applicationDbContext = _listingsService.GetAll();
-            int pageSize = 3;
+            int pageSize = 8;
 
             return View("Mylistings", await PaginatedList<Listing>.CreateAsync(applicationDbContext.Where(l => l.IdentityUserId == User.FindFirstValue(ClaimTypes.NameIdentifier)).AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         public async Task<IActionResult> MyBids(int? pageNumber)
         {
             var applicationDbContext = _bidsService.GetAll();
-            int pageSize = 3;
+            int pageSize = 8;
 
             return View(await PaginatedList<Bid>.CreateAsync(applicationDbContext.Where(l => l.IdentityUserId == User.FindFirstValue(ClaimTypes.NameIdentifier)).AsNoTracking(), pageNumber ?? 1, pageSize));
         }
