@@ -3,7 +3,7 @@
 <p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="10%">   <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="20%">   <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale%20T.png" width="10%"></p>
 
 <h1 align="center">  GEM ME - Auction Website </h1>
-<p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="10%"> </p>
+<p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/2.png" width="10%"> </p>
 <h1 align="center"> - www.gemme.com - </h1>
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
