@@ -86,7 +86,7 @@ namespace Gem_Auctions_Web.Controllers
                 return NotFound();
             }
 
-            var listing = await _listingsService.GetById(id);              
+            var listing = await _listingsService.GetById(id);
             if (listing == null)
             {
                 return NotFound();
@@ -108,7 +108,7 @@ namespace Gem_Auctions_Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ListingsVM listing)
         {
-            if(listing.Image != null) 
+            if (listing.Image != null)
             {
                 string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "Images");
                 string fileName = listing.Image.FileName;
@@ -122,7 +122,7 @@ namespace Gem_Auctions_Web.Controllers
                 {
                     Title = listing.Title,
                     Description = listing.Description,
-                    Price = listing.Price,                   
+                    Price = listing.Price,
                     IdentityUserId = listing.IdentityUserId,
                     ImagePath = fileName,
                 };
@@ -145,7 +145,6 @@ namespace Gem_Auctions_Web.Controllers
 
             return View("Details", listing);
         }
-
 
         public async Task<ActionResult> CloseBidding(int id)
         {
@@ -257,5 +256,26 @@ namespace Gem_Auctions_Web.Controllers
         {
             return _context.Listings.Any(e => e.Id == id);
         }
+
+     
+
+        // Existing action methods...
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Home()
+        {
+            return View();
+        }
+
     }
 }
+

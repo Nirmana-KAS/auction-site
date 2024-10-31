@@ -1,206 +1,85 @@
 ﻿@model PaginatedList<Gem_Auctions_Web.Models.Listing>
 
-<!-- Hero Section -->
-<div class="hero">
-    <div>
-        <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 16px;">Bid your lucky gem</h1>
-        <p>Find the best gems and jewels for your collection.</p>
-        <div class="search-bar-container">
-            <form asp-controller="Listings" asp-action="Index" method="get" style="display: flex;">
-                <input type="text" name="searchString" class="form-control search-bar-input" placeholder="Search..." />
-                <button class="search-bar-button" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
+@{
+    ViewData["Title"] = "Active Listings";
+}
+
+<h1 style="
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #000000, #fc0303, #000000);
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+">
+    Active Listings
+</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var listing in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" data-category="precious" style="width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            text-align: center;"
+                     onmouseover="this.style.transform='scale(1.05)';"
+                     onmouseout="this.style.transform='scale(1)'; ">
+                    <img src="~/Images/@listing.ImagePath" alt="@listing.Title" style="width: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="card-content" style="padding: 16px;">
+                        <h5 style="margin: 10px 0; font-size: 1.2em; color: #DAA520;">
+                            <a asp-action="Details" asp-route-id="@listing.Id"
+                            style="color: #000000; font-weight:700;">
+                            @listing.Title</a>
+                        </h5>
+                        <p style="font-size: 0.8em; color: #555; padding-bottom: 15px;">Listed by: @listing.User.Email</p>
+
+                        <p style="font-weight: bold; font-size: 1em; color:#fc0303; border-radius:10px;">Bid: $@listing.Price.ToString("N2")</p>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
 
+@if (!Model.Any())
+{
+    <p class="text-center">No Active Listings</p>
+}
 
-<section style="padding: 48px 24px; text-align: center; position: relative; margin-bottom: 48px;">
-    <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 50px; color: #ffffff; ">Ongoing Bids</h2>
-    <div id="gem-carousel" style="display: flex; justify-content: space-around; flex-wrap: nowrap; overflow-x: auto; padding: 16px;">
+<div class="d-flex justify-content-center mt-4" style="padding-top: 20px;">
+    <a asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @(!Model.HasPreviousPage ? "disabled" : "")"
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
+        Previous
+    </a>
 
-        <!-- Card 1: Ruby Gem -->
-        <div style="background-color: #ffffff; width: 18rem; border-radius: 8px; overflow: visible; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 16px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)';">
-            <img src="/Images/Ruby.jpg" alt="Ruby Gem" style="width: 100%; height: 10rem; object-fit: cover;">
-            <div style="padding: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Ruby Gem</h3>
-                <div>Time Left: <span class="countdown" data-time="2024-11-01T12:00:00Z">00:00:00</span></div>
-                <p style="color: #38a169; font-weight: bold;">Best Bid: $930</p>
-            </div>
-        </div>
-
-        <!-- Card 2: Sapphire Gem -->
-        <div style="background-color: #ffffff; width: 18rem; border-radius: 8px; overflow: visible; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 16px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)';">
-            <img src="~/Images/Sap.jpg" alt="Sapphire Gem" style="width: 100%; height: 10rem; object-fit: cover;">
-            <div style="padding: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Sapphire Gem</h3>
-                <div>Time Left: <span class="countdown" data-time="2024-10-30T15:00:00Z">00:00:00</span></div>
-                <p style="color: #38a169; font-weight: bold;">Best Bid: $920</p>
-            </div>
-        </div>
-
-        <!-- Card 3: Emerald Gem -->
-        <div style="background-color: #ffffff; width: 18rem; border-radius: 8px; overflow: visible; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 16px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)';">
-            <img src="/Images/Emara.jpg" alt="Emerald Gem" style="width: 100%; height: 10rem; object-fit: cover;">
-            <div style="padding: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Emerald Gem</h3>
-                <div>Time Left: <span class="countdown" data-time="2024-10-29T18:00:00Z">00:00:00</span></div>
-                <p style="color: #38a169; font-weight: bold;">Best Bid: $920</p>
-            </div>
-        </div>
-
-        <!-- Card 4: Citrine Gem -->
-        <div style="background-color: #ffffff; width: 18rem; border-radius: 8px; overflow: visible; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 16px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)';">
-            <img src="/Images/Citrine.jpg" alt="Topaz Gem" style="width: 100%; height: 10rem; object-fit: cover;">
-            <div style="padding: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Citrine Gem</h3>
-                <div>Time Left: <span class="countdown" data-time="2024-10-28T20:00:00Z">00:00:00</span></div>
-                <p style="color: #38a169; font-weight: bold;">Best Bid: $930</p>
-            </div>
-        </div>
-
-        <!-- Card 5: Amethyst Gem -->
-        <div style="background-color: #ffffff; width: 18rem; border-radius: 8px; overflow: visible; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-right: 16px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1.0)';">
-            <img src="/Images/Amethyst.jpg" alt="Topaz Gem" style="width: 100%; height: 10rem; object-fit: cover;">
-            <div style="padding: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Amethyst Gem</h3>
-                <div>Time Left: <span class="countdown" data-time="2024-10-28T20:00:00Z">00:00:00</span></div>
-                <p style="color: #38a169; font-weight: bold;">Best Bid: $930</p>
-            </div>
-        </div>
-
-
-
-
+    <div class="btn" style="cursor: default; color: #9ca3af;">
+        Page @Model.PageIndex of @Model.TotalPages
     </div>
-</section>
 
-<script>
-    window.onload = function () {
-        // Circular Scrolling Effect
-        const carousel = document.getElementById('gem-carousel');
-
-        const moveFirstCardToEnd = () => {
-            const firstCard = carousel.firstElementChild;
-            const cardWidth = firstCard.offsetWidth;
-
-            if (carousel.scrollLeft >= cardWidth) {
-                carousel.appendChild(firstCard);
-                carousel.scrollLeft -= cardWidth;
-            }
-        };
-
-        let scrollInterval = setInterval(() => {
-            carousel.scrollLeft += 1;
-            moveFirstCardToEnd();
-        }, 20);
-
-        carousel.addEventListener('scroll', moveFirstCardToEnd);
-
-        // Countdown Timer
-        document.querySelectorAll('.countdown').forEach(element => {
-            const targetTime = new Date(element.getAttribute('data-time'));
-            const updateCountdown = () => {
-                const now = new Date();
-                const timeLeft = targetTime - now;
-                const hours = String(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                const minutes = String(Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                const seconds = String(Math.floor((timeLeft % (1000 * 60)) / 1000)).padStart(2, '0');
-                element.textContent = `${hours}:${minutes}:${seconds}`;
-                if (timeLeft < 0) element.textContent = "Ended";
-            };
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        });
-    };
-</script>
-
-
-<!-- How It Works Section -->
-
-<section style="padding: 3rem 0;">
-
-    <!-- Decorative Line at the Top -->
-    <div style="height: 4px; width: 100%; background-color: #DAA520; margin-bottom: 32px;"></div>
-
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem;">
-        <div style="background-color: transparent; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; color: #ffffff; flex: 1; min-width: 250px; margin: 0.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; font-family: sans-serif;">Register an Account</h3>
-            <p style="font-size: 1rem; font-family: sans-serif; text-align: center; color: #9ca3af;">Sign up on our website by providing your email address and creating a password. Verify your email to activate your account.</p>
-        </div>
-        <div style="background-color: transparent; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; color: #ffffff; flex: 1; min-width: 250px; margin: 0.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; font-family: sans-serif;">Browse and Select Gems</h3>
-            <p style="font-size: 1rem; font-family: sans-serif; text-align: center; color: #9ca3af;">Explore the available gems in our auction section. Click on a gem card to view its details, including the current bid, time remaining, and images.</p>
-        </div>
-        <div style="background-color: transparent; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; color: #ffffff; flex: 1; min-width: 250px; margin: 0.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; font-family: sans-serif;">Place Your Bid</h3>
-            <p style="font-size: 1rem; font-family: sans-serif; text-align: center; color: #9ca3af;">Enter your desired bid amount in the bidding box. Click the "Place Bid" button to submit your bid. Monitor your bids and receive notifications if you are outbid!</p>
-        </div>
-    </div>
-    <!-- Decorative Line at the Top -->
-    <div style="height: 4px; width: 100%; background-color: #DAA520; margin-bottom: 32px;"></div>
-</section>
-
-<!-- Browse by Gem Type Section -->
-<section style="padding: 4rem 0; text-align: center;">
-    <div style="margin: 0 auto; padding: 0 1rem;">
-        <h2 style="font-size: 1.875rem; font-weight: bold; margin-bottom: 2rem; color: #ffffff;">Explore Gem Types</h2>
-        <p style="color: #9ca3af; font-size: 1rem; margin-bottom: 2rem;">Discover a variety of stunning gemstones. Each type has its unique beauty and value, making it easy to find the perfect gem for you or your loved ones.</p>
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <div class="gem-card" style="min-width: 18rem; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; overflow: hidden; padding-bottom: 1rem;">
-                <img src="https://storage.googleapis.com/a1aa/image/PuOAj3NDrb6kEtuD3Wgo97FxhX0U84m9yUNGsfOqS2EzsX1JA.jpg" alt="Diamonds" style="width: 100%; height: 14rem; object-fit: cover;" />
-                <h3 style="font-size: 1.25rem; font-weight: bold; padding: 1rem; color: #111827;">Diamonds</h3>
-            </div>
-            <div class="gem-card" style="min-width: 18rem; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; overflow: hidden; padding-bottom: 1rem;">
-                <img src="~/Images/Viral-diamonds.jpg" alt="Rubies" style="width: 100%; height: 14rem; object-fit: cover;" />
-                <h3 style="font-size: 1.25rem; font-weight: bold; padding: 1rem; color: #111827;">Rubies</h3>
-            </div>
-            <div class="gem-card" style="min-width: 18rem; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; overflow: hidden; padding-bottom: 1rem;">
-                <img src="https://storage.googleapis.com/a1aa/image/RfYCfJwHCHrY0UTWPDVTNNE3flN55J4F6DmmATeChr7qm9qOB.jpg" alt="Sapphires" style="width: 100%; height: 14rem; object-fit: cover;" />
-                <h3 style="font-size: 1.25rem; font-weight: bold; padding: 1rem; color: #111827;">Sapphires</h3>
-            </div>
-            <div class="gem-card" style="min-width: 18rem; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; overflow: hidden; padding-bottom: 1rem;">
-                <img src="https://storage.googleapis.com/a1aa/image/xKte4CsVoQ1PN6Tnkn4xc3Zly215wDBmnNZFfcD8umrkZvqTA.jpg" alt="Emeralds" style="width: 100%; height: 14rem; object-fit: cover;" />
-                <h3 style="font-size: 1.25rem; font-weight: bold; padding: 1rem; color: #111827;">Emeralds</h3>
-            </div>
-            <div class="gem-card" style="min-width: 18rem; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 0.5rem; overflow: hidden; padding-bottom: 1rem;">
-                <img src="~/Images/Yellow_Sapphires.webp" alt="Topaz" style="width: 100%; height: 14rem; object-fit: cover;" />
-                <h3 style="font-size: 1.25rem; font-weight: bold; padding: 1rem; color: #111827;">Topaz</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Partner Section -->
-<section style="background-color: rgb(17, 24, 39); padding-top: 3rem; padding-bottom: 3rem;">
-    <div style="max-width: 100%; margin: 0 auto; padding: 0 1rem; text-align: center;">
-        <h2 style="font-size: 1.875rem; font-weight: bold; color: #ffffff; margin-bottom: 3rem;">Our Partners</h2>
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-            <!-- Logo 1 -->
-            <div style="flex: 1 1 auto; display: flex; justify-content: center; margin: 0 10px;">
-                <img src="~/Images/amz.png" alt="Partner Logo 1" style="height: 5rem;" />
-            </div>
-            <!-- Logo 2 -->
-            <div style="flex: 1 1 auto; display: flex; justify-content: center; margin: 0 10px;">
-                <img src="/Images/ski.png" alt="Partner Logo 2" style="height: 5rem;" />
-            </div>
-            <!-- Logo 3 -->
-            <div style="flex: 1 1 auto; display: flex; justify-content: center; margin: 0 10px;">
-                <img src="/Images/bit.png" alt="Partner Logo 3" style="height: 5rem;" />
-            </div>
-            <!-- Logo 4 -->
-            <div style="flex: 1 1 auto; display: flex; justify-content: center; margin: 0 10px;">
-                <img src="/Images/gg.png" alt="Partner Logo 4" style="height: 5rem;" />
-            </div>
-            <!-- Logo 5 -->
-            <div style="flex: 1 1 auto; display: flex; justify-content: center; margin: 0 10px;">
-                <img src="/Images/pay.png" alt="Partner Logo 5" style="height: 5rem;" />
-            </div>
-        </div>
-    </div>
-</section>
+    <a asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @(!Model.HasNextPage ? "disabled" : "")"
+       style="color: #9ca3af; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';"
+       onmouseout="this.style.color='#9ca3af';">
+        Next
+    </a>
+</div>
 
 
 

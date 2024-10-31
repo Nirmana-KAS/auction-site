@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Images\\01.jpg"
     },
     {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\1.png",
+      "PackagePath": "staticwebassets\\Images\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\2.png",
+      "PackagePath": "staticwebassets\\Images\\2.png"
+    },
+    {
       "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Amethyst.jpg",
       "PackagePath": "staticwebassets\\Images\\Amethyst.jpg"
     },
@@ -25,6 +33,130 @@
       "PackagePath": "staticwebassets\\Images\\Gemme Logo 1.png"
     },
     {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Ash Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Ash Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Blue Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Blue Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Blue Light White Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Blue Light White Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Blue Viral Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Blue Viral Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Cut Dark Purple Gem.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Cut Dark Purple Gem.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Cut Purple Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Cut Purple Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Cut Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Cut Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Dark Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Dark Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Dark Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Dark Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Dark Purple Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Dark Purple Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Diamond Cut Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Diamond Cut Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Diamond Cut Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Diamond Cut Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Green Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Green Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Light Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Light Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Light Pink Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Light Pink Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Light Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Light Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Light Rose Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Light Rose Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Pinkish Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Pinkish Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Red Heart Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Red Heart Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Rose Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Rose Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Round Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Round Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Round Cut Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Round Cut Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Round Pink Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Round Pink Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Round Rose Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Round Rose Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Squre Cur Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Squre Cur Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Squre Cut Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Squre Cut Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL Star Cut Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL Star Cut Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL White Cut Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL White Cut Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL White Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL White Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL White Gem.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL White Gem.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Gems\\SL White Gem.png",
+      "PackagePath": "staticwebassets\\Images\\Gems\\SL White Gem.png"
+    },
+    {
       "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Opal.jpg",
       "PackagePath": "staticwebassets\\Images\\Opal.jpg"
     },
@@ -33,12 +165,92 @@
       "PackagePath": "staticwebassets\\Images\\Ruby.jpg"
     },
     {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Ash Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Ash Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Blue Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\SL Blue Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Blue Light White Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Blue Light White Gem.png"
+    },
+    {
       "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Blue Shappire.png",
       "PackagePath": "staticwebassets\\Images\\SL Blue Shappire.png"
     },
     {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Blue Viral Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Blue Viral Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Cut Purple Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Cut Purple Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Cut Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Cut Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Dark Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Dark Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Dark Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Dark Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Dark Purple Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Dark Purple Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Diamond Cut Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Diamond Cut Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Diamond Cut Geen Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Diamond Cut Geen Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Green Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\SL Green Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Light Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Light Blue Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Light Pink Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Light Pink Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Light Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Light Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Light Rose Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Light Rose Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Pinkish Red Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Pinkish Red Gem.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Red Heart Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Red Heart Gem.png"
+    },
+    {
       "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Red Shappire.png",
       "PackagePath": "staticwebassets\\Images\\SL Red Shappire.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Rose Gem - BG Remove.png",
+      "PackagePath": "staticwebassets\\Images\\SL Rose Gem - BG Remove.png"
+    },
+    {
+      "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\SL Round Blue Gem.png",
+      "PackagePath": "staticwebassets\\Images\\SL Round Blue Gem.png"
     },
     {
       "Id": "C:\\Users\\sheha\\OneDrive\\Documents\\.AspNet  Projects\\Gem-Auctions-Web\\Gem-Auctions-Web\\wwwroot\\Images\\Sap.jpg",

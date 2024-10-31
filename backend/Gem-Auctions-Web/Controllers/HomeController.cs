@@ -13,10 +13,12 @@ namespace Gem_Auctions_Web.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
+
+
 
         public IActionResult Privacy()
         {
@@ -28,5 +30,7 @@ namespace Gem_Auctions_Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }

@@ -4,27 +4,56 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>My Bids</h2>
+<h1 style="
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #000000, #2fed85, #000000);
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+">
+    My Wins!
+</h1>
 
-@foreach (var bid in Model)
-{
-    <div class="container" style="background-color: rgba(138, 129, 133, 0.6); margin-top:50px; margin-bottom: 50px; padding: 20px; border-radius:10px;">
-        <div class="row">
-            <div class="col col-xs-6 col-lg-5">
-                <img src="~/Images/@bid.Listing.ImagePath" style="max-width: 400px; max-height: 400px;" />
-            </div>
-            <div class="col col-xs-6 col-lg-7">
-                <h5><a asp-action="Details" asp-route-id="@bid.Listing.Id" style="color: black;">@bid.Listing.Title</a></h5>
-                <div>@bid.Listing.Description</div>
-                <div>Bid: $@bid.Listing.Price.ToString("N2")</div>
-                <div>Listed by: @bid.Listing.User.Email</div>
-            </div>
+<div style="display: flex; flex-wrap: wrap; gap: 100px; justify-content: center;">
+    @foreach (var bid in Model)
+    {
+        <div style="
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+            
+            "
+             onmouseover="this.style.transform='scale(1.05)';"
+             onmouseout="this.style.transform='scale(1)'; ">
+            <img src="~/Images/@bid.Listing.ImagePath"
+                 style="width: 100%; object-fit: cover; border-radius: 8px;" />
+            <h5 style="margin: 10px 0; font-size: 1.2em; color: #DAA520;">
+                <a asp-action="Details" asp-route-id="@bid.Listing.Id"
+                   style="color: #000000; font-weight:700;">
+                    @bid.Listing.Title
+                </a>
+            </h5>
+            <p style="font-size: 0.8em; color: #555; padding-bottom: 15px;">Listed by: @bid.Listing.User.Email</p>
+            <p style="font-weight: bold; font-size: 1em; color:#2fed85; border-radius:10px;">Bid: $@bid.Listing.Price.ToString("N2")</p>
+            
         </div>
-    </div>
-}
+    }
+</div>
+
 @if (!Model.Any())
 {
-    <p>No Bids</p>
+    <p style="text-align: center;">No Bids</p>
 }
 
 @{
@@ -32,18 +61,26 @@
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mt-4" style="padding-top: 20px;">
     <a asp-action="Index"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
-       class="btn btn-default @prevDisabled">
+       class="btn btn-default @(!Model.HasPreviousPage ? "disabled" : "")"
+       style="margin: 0 5px; background-color: #2fed85; color: white; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';" 
+       onmouseout="this.style.color='white';">
         Previous
     </a>
-    <div class="btn" style="cursor: default">
+    
+    <div style="margin: 0 10px; padding: 8px; font-weight: bold; cursor: default; color: #9ca3af;">
         Page @Model.PageIndex of @Model.TotalPages
     </div>
+    
     <a asp-action="Index"
        asp-route-pageNumber="@(Model.PageIndex + 1)"
-       class="btn btn-default @nextDisabled">
+       class="btn btn-default @(!Model.HasNextPage ? "disabled" : "")"
+       style="margin: 0 5px; background-color: #2fed85; color: white; text-decoration: none;"
+       onmouseover="this.style.color='#ffffff';" 
+       onmouseout="this.style.color='white';">
         Next
     </a>
 </div>

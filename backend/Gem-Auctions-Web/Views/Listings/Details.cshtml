@@ -6,8 +6,6 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
 @if (User.Identity.IsAuthenticated)
 {
     @if (Model.IsSold == true)
@@ -18,48 +16,61 @@
             {
                 @if (bid.IdentityUserId == userManager.GetUserId(User))
                 {
-                    <h5>Congratulations, you are the winner!</h5>
+                    <h5 style="color: green; text-align: center; font-weight: bold;">Congratulations, you are the winner!</h5>
                 }
                 else if (userManager.GetUserId(User) == Model.User.Id)
                 {
-                    <h5>@bid.User.UserName is the winner!</h5>
+                    <h5 style="color: orange; text-align: center; font-weight: bold;">@bid.User.UserName is the winner!</h5>
                 }
                 else
                 {
-                    <h5>Bidding is closed!</h5>
+                    <h5 style="color: red; text-align: center; font-weight: bold;">Bidding is closed!</h5>
                 }
             }
         }
     }
 }
 
+<h1 style="
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #000000, #9D50BB, #4A90E2, #009B77, #FDC830, #E94E77, #FFC4C4, #D1D1D1, #000000);
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+">
+    <i class="fa-regular fa-gem"></i> @Model.Title <i class="fa-regular fa-gem"></i>
+</h1>
 
-<h4 style="text-align:center">@Model.Title</h4>
-<div class="container" style="background-color: rgba(138, 129, 133, 0.6); margin-top: 50px; margin-bottom: 50px; padding: 20px; border-radius:10px;">
+<div class="container" style="background-color: #f7f7f7; margin-top: 50px; margin-bottom: 50px; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
     <div class="row">
-        <div class="col col-xs-6 col-lg-5">
-            <img src="~/Images/@Model.ImagePath" style="width: 100%; max-height: 60vh;" />
+        <div class="col col-xs-6 col-lg-5" style="text-align: center;">
+            <img src="~/Images/@Model.ImagePath" style="width: 100%; max-height: 60vh; border-radius: 10px; border: 2px solid #ddd;" />
         </div>
-        <div class="col col-xs-6 col-lg-7">
-            <div>@Model.Description</div>
+        <div class="col col-xs-6 col-lg-7" style="padding: 20px;">
+            <div style="font-size: 16px; color: #555;">@Model.Description</div>
             @if (User.Identity.IsAuthenticated)
             {
-                <form asp-action="AddBid" method="post">
-                    <div>
-                        Bid: $ <input type="number" min="@Model.Price" step="1" name="Price" placeholder="@Model.Price.ToString("N2")" />
+                <form asp-action="AddBid" method="post" style="margin-top: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="Price" style="font-weight: bold;">Bid:</label> $
+                        <input type="number" min="@Model.Price" step="1" name="Price" placeholder="@Model.Price.ToString("N2")" style="border-radius: 5px; border: 1px solid #ccc; padding: 5px; width: 100px;" />
                         <input type="hidden" name="IdentityUserId" class="form-control" value="@userManager.GetUserId(User)" />
                         <input type="hidden" name="ListingId" class="form-control" value="@Model.Id" />
-                        <input type="submit" class="btn btn-primary">
+                        <input type="submit" class="btn btn-primary" value="Place Bid" style="margin-left: 10px; background-color: #DAA520; border: none; border-radius: 5px; color: white; padding: 8px 15px;">
+
                     </div>
                 </form>
-                <p>Bids submitted: @Model.Bids.Count</p>
+                <p style="font-style: italic;">Bids submitted: @Model.Bids.Count</p>
                 <br>
                 @if (userManager.GetUserId(User) == Model.User.Id)
                 {
                     @foreach (var bid in Model.Bids)
                     {
-                        <ul style="list-style-type: none;">
-                            @bid.User.UserName bidded $@bid.Price.ToString("N2").
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="color: #555;">@bid.User.UserName bidded $@bid.Price.ToString("N2").</li>
                         </ul>
                     }
                 }
@@ -67,13 +78,14 @@
             else
             {
                 <div>
-                    Bid: $ <input type="number" min="@Model.Price" step="1" name="Price" placeholder="@Model.Price.ToString("N2")" />
-                    <input disabled type="submit" class="btn btn-primary">
+                    <label for="Price" style="font-weight: bold; color: #2fed85;">Bid:</label> $
+                    <input type="number" min="@Model.Price" step="1" name="Price" placeholder="@Model.Price.ToString("N2")" style="border-radius: 5px; border: 1px solid #ccc; padding: 5px; width: 100px;" disabled />
+                    <input disabled type="submit" class="btn btn-primary" style="margin-left: 10px; background-color: #007BFF; border: none; border-radius: 5px; color: black; padding: 8px 15px;">
                 </div>
-                <p>Bids submitted: @Model.Bids.Count</p>
+                <p style="font-style: italic;">Bids submitted: @Model.Bids.Count</p>
             }
 
-            <div>Listed by: @Model.User.UserName</div>
+            <div style="font-weight: bold; margin-top: 20px;">Listed by: @Model.User.UserName</div>
 
             @if (User.Identity.IsAuthenticated)
             {
@@ -81,46 +93,47 @@
                 {
                     @if (Model.IsSold == false)
                     {
-                        <a asp-action="CloseBidding" asp-route-id="@Model.Id">Close bidding</a>
-                    }
+                        <button style="color: #fff; background-color: #d9534f; font-weight: bold; margin-top: 20px; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">
+                            <a asp-action="CloseBidding" asp-route-id="@Model.Id">Close bidding</a>
+                            
+                        </button>
 
+                    }
                 }
             }
+            
         </div>
     </div>
 </div>
+    <br>
 
-<br>
-
-@if (User.Identity.IsAuthenticated)
-{
-    <div class="container">
-        <form asp-action="AddComment" method="post">
-            <h6>Add comment</h6>
-            <textarea class="form-control" aria-label="With textarea" name="Content" style="width: 40%; vertical-align:top;"></textarea>
-            <input type="hidden" name="IdentityUserId" class="form-control" value="@userManager.GetUserId(User)" />
-            <input type="hidden" name="ListingId" class="form-control" value="@Model.Id" />
-            <input type="submit" class="btn btn-primary" style="display: inline-block; margin-top:10px;">
-        </form>
-    </div>
-}
-else
-{
-    <div class="container">
-        <h6>Add comment</h6>
-        <textarea class="form-control" aria-label="With textarea" name="Content" style="width: 40%; vertical-align:top;"></textarea>
-        <input type="submit" disabled class="btn btn-primary" style="display: inline-block; margin-top:10px;">
-    </div>
-}
-<br>
-<div class="container">
-    <h6>Comments</h6>
-    @foreach (var comment in Model.Comments)
+    @if (User.Identity.IsAuthenticated)
     {
-        <div style="border:1px solid lightgray; margin: 10px; padding: 10px; border-radius: 10px; width: 40%;">
-            <p>@comment.Content - @(comment.User?.UserName ?? "Unknown User")</p>
+        <div class="container" style="padding: 20px; background-color: #f7f7f7; border-radius: 10px;">
+            <form asp-action="AddComment" method="post">
+                <h6 style="font-weight: bold;">Add comment</h6>
+                <textarea class="form-control" aria-label="With textarea" name="Content" style="width: 100%; height: 100px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;"></textarea>
+                <input type="hidden" name="IdentityUserId" class="form-control" value="@userManager.GetUserId(User)" />
+                <input type="hidden" name="ListingId" class="form-control" value="@Model.Id" />
+                <input type="submit" class="btn btn-primary" style="display: inline-block; margin-top: 10px; background-color: #007BFF; border: none; border-radius: 5px; color: white; padding: 8px 15px;">
+            </form>
         </div>
     }
-</div>
-
-
+    else
+    {
+        <div class="container" style="padding: 20px; background-color: #f7f7f7; border-radius: 10px;">
+            <h6 style="font-weight: bold;">Add comment</h6>
+            <textarea class="form-control" aria-label="With textarea" name="Content" style="width: 100%; height: 100px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;" disabled></textarea>
+            <input type="submit" disabled class="btn btn-primary" style="display: inline-block; margin-top: 10px; background-color: #007BFF; border: none; border-radius: 5px; color: white; padding: 8px 15px;">
+        </div>
+    }
+    <br>
+    <div class="container" style="padding: 20px; background-color: #f7f7f7; border-radius: 10px;">
+        <h6 style="font-weight: bold;">Comments</h6>
+        @foreach (var comment in Model.Comments)
+        {
+            <div style="border: 1px solid lightgray; margin: 10px 0; padding: 10px; border-radius: 10px; background-color: #fff;">
+                <p style="margin: 0;">@comment.Content - @(comment.User?.UserName ?? "Unknown User")</p>
+            </div>
+        }
+    </div>

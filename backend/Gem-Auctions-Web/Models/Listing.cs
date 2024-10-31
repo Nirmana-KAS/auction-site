@@ -14,6 +14,7 @@ namespace Gem_Auctions_Web.Models
         public string ImagePath { get; set; }
         public bool IsSold { get; set; } = false;
 
+
         [Required]
         public string? IdentityUserId { get; set; }
         [ForeignKey("IdentityUserId")]
