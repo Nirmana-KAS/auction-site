@@ -3,7 +3,7 @@
 <p align="center"> <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale.png" width="10%">   <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/Gem.gif" width="20%">   <img src="https://github.com/Nirmana-KAS/Tempate-Photo/blob/main/GEM%20ME%20Web%20Logo%20Upscale%20T.png" width="10%"></p>
 
 <h1 align="center">  GEM ME - Auction Website </h1>
-<h2>[www.gemme.com](http://www.gemme.com)</h2>
+<h2 align="center">www.gemme.com</h2>
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 Welcome to **GEM ME**, an online auction house where you can bid on and sell high-quality gemstones. This project uses a combination of front-end and back-end technologies to create a seamless user experience for both buyers and sellers.
